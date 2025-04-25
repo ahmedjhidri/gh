@@ -129,7 +129,7 @@
         </div>
     </footer>
 
-       <!-- Back to Top Button -->
+    <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Back to Top">
         <i class="fas fa-chevron-up"></i>
     </button>
@@ -147,7 +147,8 @@
         };
         darkModeToggle.addEventListener('click', toggleDarkMode);
         darkModeToggle.addEventListener('touchstart', (e) => {
-            e.preventDefault(); // Prevent default touch behavior
+            e.preventDefault();
+            e.stopPropagation();
             toggleDarkMode();
         });
 
@@ -161,6 +162,7 @@
         const menuToggle = document.getElementById('menu-toggle');
         const nav = document.querySelector('nav');
         const toggleMenu = () => {
+            console.log("Hamburger menu toggle triggered");
             nav.classList.toggle('active');
             const isOpen = nav.classList.contains('active');
             menuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
@@ -168,6 +170,7 @@
         menuToggle.addEventListener('click', toggleMenu);
         menuToggle.addEventListener('touchstart', (e) => {
             e.preventDefault();
+            e.stopPropagation();
             toggleMenu();
         });
 
@@ -192,3 +195,4 @@
         });
     </script>
 </body>
+</html>
