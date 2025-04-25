@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read the latest blog posts from GWorks Construction, including construction tips and industry trends in Tunisia.">
+    <meta name="keywords" content="GWorks Construction blog, construction tips Tunisia, industry trends construction">
+    <title>Blog - GWorks Construction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-800"><span class="orange-g">G</span>Works Construction</div>
+            <button id="menu-toggle" class="md:hidden" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="space-x-6 hidden md:flex">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
+                <a href="projects.html" class="text-gray-700 hover:text-blue-600">Projects</a>
+                <a href="careers.html" class="text-gray-700 hover:text-blue-600">Careers</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="blog.html" class="text-gray-700 hover:text-blue-600">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 flex-grow">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Our Blog</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">Stay updated with the latest news, construction tips, and insights from GWorks Construction.</p>
+        </section>
+        <section class="space-y-8">
+            <div class="bg-white p-6 rounded shadow fade-in">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Top 5 Trends in Sustainable Construction for 2025</h3>
+                <p class="text-gray-600 mb-4">April 25, 2025</p>
+                <p class="text-gray-600 mb-4">Discover the latest trends in sustainable construction, from eco-friendly materials to energy-efficient designs, and how GWorks is leading the way.</p>
+                <a href="#" class="text-blue-600 hover:underline">Read More</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4"><span class="orange-g">G</span>Works Construction</h4>
+                    <p>Leading construction services in Tunisia.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+                        <li><a href="services.html" class="hover:text-blue-400">Services</a></li>
+                        <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+                        <li><a href="careers.html" class="hover:text-blue-400">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-400">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/gworksconstructions" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gworks.tn" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p>© 2025 GWorks Construction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('darkMode', isDarkMode);
+        });
+
+        // Restore Dark Mode Preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Hamburger Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            const isOpen = nav.classList.contains('active');
+            menuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Sticky Header on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 300);
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
