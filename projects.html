@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore GWorks Construction's projects, including residential, commercial, and industrial developments in Tunisia.">
+    <meta name="keywords" content="GWorks Construction projects, construction projects Tunisia, residential projects Tunis">
     <title>Projects - GWorks Construction</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,9 +18,11 @@
             <nav class="space-x-6">
                 <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
                 <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
                 <a href="projects.html" class="text-gray-700 hover:text-blue-600">Projects</a>
                 <a href="careers.html" class="text-gray-700 hover:text-blue-600">Careers</a>
                 <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="blog.html" class="text-gray-700 hover:text-blue-600">Blog</a>
             </nav>
         </div>
     </header>
@@ -29,18 +33,27 @@
             <h1 class="text-4xl font-bold text-gray-800 mb-4">Our Projects</h1>
             <p class="text-gray-600 max-w-2xl mx-auto">Explore some of our completed and ongoing projects showcasing our expertise and commitment to quality.</p>
         </section>
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded shadow">
-                <img src="photo1.jpg" alt="Construction Site" class="w-full h-48 object-cover rounded mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Foundation Work</h3>
+
+        <!-- Filter Buttons -->
+        <section class="mb-8 text-center">
+            <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded mr-2 hover:bg-blue-700" data-filter="all">All</button>
+            <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded mr-2 hover:bg-gray-400" data-filter="commercial">Commercial</button>
+            <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded mr-2 hover:bg-gray-400" data-filter="residential">Residential</button>
+            <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400" data-filter="industrial">Industrial</button>
+        </section>
+
+        <!-- Project Gallery -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 project-gallery">
+            <div class="bg-white p-6 rounded shadow fade-in project-item" data-category="commercial">
+                 <img src="photo1.jpg" alt="Construction Site" class="w-full h-48 object-cover rounded mb-4">
                 <p class="text-gray-600">Laying the groundwork for a major commercial project in Tunis, featuring advanced foundation techniques.</p>
             </div>
-            <div class="bg-white p-6 rounded shadow">
+            <div class="bg-white p-6 rounded shadow fade-in project-item" data-category="residential">
                 <img src="photo2.jpg" alt="Modern Living Room" class="w-full h-48 object-cover rounded mb-4">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Luxury Residential Interior</h3>
                 <p class="text-gray-600">A sophisticated living space in Sfax with modern design elements, completed in 2024.</p>
             </div>
-            <div class="bg-white p-6 rounded shadow">
+            <div class="bg-white p-6 rounded shadow fade-in project-item" data-category="residential">
                 <img src="photo3.jpg" alt="Multi-Story Building" class="w-full h-48 object-cover rounded mb-4">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">High-Rise Construction</h3>
                 <p class="text-gray-600">A multi-story residential building under construction, showcasing innovative structural design.</p>
@@ -60,9 +73,11 @@
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
                         <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+                        <li><a href="services.html" class="hover:text-blue-400">Services</a></li>
                         <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
                         <li><a href="careers.html" class="hover:text-blue-400">Careers</a></li>
                         <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-400">Blog</a></li>
                     </ul>
                 </div>
                 <div>
@@ -78,5 +93,29 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript for Filtering -->
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('bg-blue-600', 'text-white');
+                    btn.classList.add('bg-gray-300', 'text-gray-800');
+                });
+                button.classList.remove('bg-gray-300', 'text-gray-800');
+                button.classList.add('bg-blue-600', 'text-white');
+
+                const filter = button.getAttribute('data-filter');
+                const items = document.querySelectorAll('.project-item');
+                items.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
