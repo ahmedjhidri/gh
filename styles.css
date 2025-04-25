@@ -68,6 +68,11 @@ h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
 h3 { font-size: clamp(1.25rem, 3vw, 2rem); }
 p { font-size: clamp(1rem, 2.5vw, 1.125rem); line-height: 1.6; }
 
+/* Ensure Footer Headings are White */
+footer h4 {
+    color: white;
+}
+
 /* Hero Section */
 .hero {
     background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
@@ -227,7 +232,7 @@ body.dark-mode ::-webkit-scrollbar-thumb {
     }
 
     nav {
-        display: flex;
+        display: none; /* Hide by default on mobile */
         flex-direction: column;
         gap: 1rem;
         position: absolute;
@@ -236,19 +241,17 @@ body.dark-mode ::-webkit-scrollbar-thumb {
         right: 0;
         background: var(--white);
         padding: 1rem;
-        transform: translateY(-100%);
+        opacity: 0;
+        height: 0;
         transition: var(--transition);
-        visibility: hidden;
-        max-height: 0;
         overflow-y: auto;
         z-index: 99;
     }
 
     nav.active {
-        display: flex !important; /* Override Tailwind's hidden class */
-        transform: translateY(0);
-        visibility: visible;
-        max-height: 70vh;
+        display: flex; /* Show when active */
+        opacity: 1;
+        height: auto;
     }
 
     nav a {
