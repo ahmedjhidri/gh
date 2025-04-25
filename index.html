@@ -129,7 +129,7 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
+       <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Back to Top">
         <i class="fas fa-chevron-up"></i>
     </button>
@@ -138,11 +138,17 @@
     <script>
         // Dark Mode Toggle
         const darkModeToggle = document.getElementById('dark-mode-toggle');
-        darkModeToggle.addEventListener('click', () => {
+        const toggleDarkMode = () => {
+            console.log("Dark mode toggle triggered");
             document.body.classList.toggle('dark-mode');
             const isDarkMode = document.body.classList.contains('dark-mode');
             darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
             localStorage.setItem('darkMode', isDarkMode);
+        };
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+        darkModeToggle.addEventListener('touchstart', (e) => {
+            e.preventDefault(); // Prevent default touch behavior
+            toggleDarkMode();
         });
 
         // Restore Dark Mode Preference
@@ -154,10 +160,15 @@
         // Hamburger Menu Toggle
         const menuToggle = document.getElementById('menu-toggle');
         const nav = document.querySelector('nav');
-        menuToggle.addEventListener('click', () => {
+        const toggleMenu = () => {
             nav.classList.toggle('active');
             const isOpen = nav.classList.contains('active');
             menuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        };
+        menuToggle.addEventListener('click', toggleMenu);
+        menuToggle.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            toggleMenu();
         });
 
         // Sticky Header on Scroll
@@ -175,6 +186,9 @@
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+        backToTop.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 </body>
-</html>
