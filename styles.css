@@ -74,7 +74,7 @@ p { font-size: clamp(1rem, 2.5vw, 1.125rem); line-height: 1.6; }
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 50vh;
+    height: 70vh; /* Increased height to accommodate the image */
     min-height: 400px;
 }
 
@@ -173,16 +173,24 @@ body.dark-mode header.scrolled {
     top: 1rem;
     right: 1rem;
     z-index: 100;
-    padding: 0.5rem;
-    background: var(--primary-blue);
+    padding: 0.25rem; /* Reduced padding to make the button smaller */
+    background: linear-gradient(135deg, #0066cc, #003366); /* Gradient background */
     color: var(--white);
     border-radius: 50%;
     cursor: pointer;
     transition: var(--transition);
+    box-shadow: 0 0 8px rgba(0, 102, 204, 0.3); /* Glow effect */
 }
 
-#dark-mode-toggle:hover {
-    background: #005bb5;
+#dark-mode-toggle i {
+    font-size: 1rem; /* Smaller icon size */
+}
+
+#dark-mode-toggle:hover,
+#dark-mode-toggle:focus {
+    transform: rotate(360deg); /* Rotation animation on hover/tap */
+    background: linear-gradient(135deg, #005bb5, #002244);
+    box-shadow: 0 0 12px rgba(0, 102, 204, 0.5);
 }
 
 /* Custom Scrollbar */
@@ -262,7 +270,7 @@ body.dark-mode ::-webkit-scrollbar-thumb {
     }
 
     .hero {
-        height: 40vh;
+        height: 60vh; /* Increased height to accommodate the image on mobile */
         min-height: 300px;
     }
 
