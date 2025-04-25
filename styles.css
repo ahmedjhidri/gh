@@ -74,7 +74,7 @@ p { font-size: clamp(1rem, 2.5vw, 1.125rem); line-height: 1.6; }
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 70vh; /* Increased height to accommodate the image */
+    height: 70vh;
     min-height: 400px;
 }
 
@@ -173,22 +173,22 @@ body.dark-mode header.scrolled {
     top: 1rem;
     right: 1rem;
     z-index: 100;
-    padding: 0.25rem; /* Reduced padding to make the button smaller */
-    background: linear-gradient(135deg, #0066cc, #003366); /* Gradient background */
+    padding: 0.25rem;
+    background: linear-gradient(135deg, #0066cc, #003366);
     color: var(--white);
     border-radius: 50%;
     cursor: pointer;
     transition: var(--transition);
-    box-shadow: 0 0 8px rgba(0, 102, 204, 0.3); /* Glow effect */
+    box-shadow: 0 0 8px rgba(0, 102, 204, 0.3);
 }
 
 #dark-mode-toggle i {
-    font-size: 1rem; /* Smaller icon size */
+    font-size: 1rem;
 }
 
 #dark-mode-toggle:hover,
 #dark-mode-toggle:focus {
-    transform: rotate(360deg); /* Rotation animation on hover/tap */
+    transform: rotate(360deg);
     background: linear-gradient(135deg, #005bb5, #002244);
     box-shadow: 0 0 12px rgba(0, 102, 204, 0.5);
 }
@@ -245,9 +245,10 @@ body.dark-mode ::-webkit-scrollbar-thumb {
     }
 
     nav.active {
+        display: flex !important; /* Override Tailwind's hidden class */
         transform: translateY(0);
         visibility: visible;
-        max-height: 70vh; /* Ensure the menu can scroll if too long */
+        max-height: 70vh;
     }
 
     nav a {
@@ -270,7 +271,7 @@ body.dark-mode ::-webkit-scrollbar-thumb {
     }
 
     .hero {
-        height: 60vh; /* Increased height to accommodate the image on mobile */
+        height: 60vh;
         min-height: 300px;
     }
 
