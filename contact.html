@@ -3,22 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact GWorks Construction for top-quality construction services in Tunisia. Reach out for inquiries, quotes, or project discussions.">
+    <meta name="keywords" content="contact GWorks Construction, construction services Tunisia, Tunis construction company">
     <title>Contact - GWorks Construction</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <!-- Header -->
     <header class="bg-white shadow sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-blue-800"><span class="orange-g">G</span>Works Construction</div>
-            <nav class="space-x-6">
+            <button id="menu-toggle" class="md:hidden" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="space-x-6 hidden md:flex">
                 <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
                 <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
                 <a href="projects.html" class="text-gray-700 hover:text-blue-600">Projects</a>
                 <a href="careers.html" class="text-gray-700 hover:text-blue-600">Careers</a>
                 <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="blog.html" class="text-gray-700 hover:text-blue-600">Blog</a>
             </nav>
         </div>
     </header>
@@ -27,27 +39,33 @@
     <main class="container mx-auto px-4 py-12 flex-grow">
         <section class="text-center mb-12">
             <h1 class="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
-            <p class="text-gray-600 max-w-2xl mx-auto">Get in touch with us for inquiries, project discussions, or career opportunities.</p>
+            <p class="text-gray-600 max-w-2xl mx-auto">We’d love to hear from you! Reach out for inquiries, quotes, or project discussions.</p>
         </section>
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Reach Out</h2>
-                <p class="text-gray-600 mb-4">Email: info@gworksconstruction.tn</p>
-                <p class="text-gray-600 mb-4">Phone: +216 71 123 456</p>
-                <p class="text-gray-600 mb-4">Address: 123 Avenue Habib Bourguiba, Tunis, Tunisia</p>
-                <div class="flex space-x-4">
-                    <a href="https://www.facebook.com/gworksconstructions" class="text-blue-600 hover:text-blue-800"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/gworks.tn" class="text-blue-600 hover:text-blue-800"><i class="fab fa-instagram"></i></a>
-                </div>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Get in Touch</h2>
+                <form action="https://formspree.io/f/xnqkqwev" method="POST" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700">Message</label>
+                        <textarea id="message" name="message" required rows="4" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send Message</button>
+                </form>
             </div>
             <div>
-                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Send a Message</h2>
-                <div class="bg-white p-6 rounded shadow">
-                    <input type="text" placeholder="Your Name" class="w-full p-3 mb-4 border rounded">
-                    <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 border rounded">
-                    <textarea placeholder="Your Message" class="w-full p-3 mb-4 border rounded" rows="5"></textarea>
-                    <button class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Send Message</button>
-                </div>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Our Location</h2>
+                <p class="text-gray-600 mb-4">123 Avenue Habib Bourguiba, Tunis, Tunisia</p>
+                <p class="text-gray-600 mb-4">Phone: +216 71 123 456</p>
+                <p class="text-gray-600 mb-4">Email: contact@gworks.tn</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.614229632727!2d10.181531315201234!3d36.80649497994885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337f5e7e0f0b%3A0x7e6f1b0a4e5e4b9e!2sAvenue%20Habib%20Bourguiba%2C%20Tunis%2C%20Tunisia!5e0!3m2!1sen!2sus!4v1698281234567!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
@@ -64,9 +82,11 @@
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
                         <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+                        <li><a href="services.html" class="hover:text-blue-400">Services</a></li>
                         <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
                         <li><a href="careers.html" class="hover:text-blue-400">Careers</a></li>
                         <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-400">Blog</a></li>
                     </ul>
                 </div>
                 <div>
@@ -82,5 +102,53 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('darkMode', isDarkMode);
+        });
+
+        // Restore Dark Mode Preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Hamburger Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            const isOpen = nav.classList.contains('active');
+            menuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Sticky Header on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 300);
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
