@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore GWorks Construction's projects, including residential, commercial, and industrial developments in Tunisia.">
-    <meta name="keywords" content="GWorks Construction projects, construction projects Tunisia, residential projects Tunis">
-    <title>Projects - GWorks Construction</title>
+    <meta name="description" content="View the portfolio of projects by GWorks Construction in Tunisia, including residential, commercial, and industrial works.">
+    <meta name="keywords" content="construction projects Tunisia, GWorks Construction portfolio, residential projects, commercial projects">
+    <title>GWorks Construction - Projects</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <!-- Header -->
     <header class="bg-white shadow sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-blue-800"><span class="orange-g">G</span>Works Construction</div>
-            <nav class="space-x-6">
+            <button id="menu-toggle" class="md:hidden" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="space-x-6 hidden md:flex">
                 <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
                 <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
                 <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
@@ -27,36 +35,72 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero h-96 flex items-center justify-center text-white relative">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4">Our Projects at <span class="orange-g">G</span>Works Construction</h1>
+            <p class="text-lg mb-6">Discover our portfolio of successful construction projects across Tunisia.</p>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12 flex-grow">
         <section class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">Our Projects</h1>
-            <p class="text-gray-600 max-w-2xl mx-auto">Explore some of our completed and ongoing projects showcasing our expertise and commitment to quality.</p>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Project Portfolio</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Explore our diverse range of projects, showcasing our expertise in residential, commercial, and industrial construction.</p>
         </section>
 
         <!-- Filter Buttons -->
-        <section class="mb-8 text-center">
-            <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded mr-2 hover:bg-blue-700" data-filter="all">All</button>
-            <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded mr-2 hover:bg-gray-400" data-filter="commercial">Commercial</button>
-            <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded mr-2 hover:bg-gray-400" data-filter="residential">Residential</button>
-            <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400" data-filter="industrial">Industrial</button>
-        </section>
+        <div class="flex justify-center space-x-4 mb-8">
+            <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded" data-filter="all">All</button>
+            <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded" data-filter="residential">Residential</button>
+            <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded" data-filter="commercial">Commercial</button>
+            <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded" data-filter="industrial">Industrial</button>
+        </div>
 
         <!-- Project Gallery -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 project-gallery">
-            <div class="bg-white p-6 rounded shadow fade-in project-item" data-category="commercial">
-                 <img src="photo1.jpg" alt="Construction Site" class="w-full h-48 object-cover rounded mb-4">
-                <p class="text-gray-600">Laying the groundwork for a major commercial project in Tunis, featuring advanced foundation techniques.</p>
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="project-item bg-white rounded shadow fade-in" data-category="residential">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Residential Project 1">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Foundation Work</h3>
+                    <p class="text-gray-600">A contemporary family home in Tunis, designed for comfort and sustainability.</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded shadow fade-in project-item" data-category="residential">
-                <img src="photo2.jpg" alt="Modern Living Room" class="w-full h-48 object-cover rounded mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Luxury Residential Interior</h3>
-                <p class="text-gray-600">A sophisticated living space in Sfax with modern design elements, completed in 2024.</p>
+            <div class="project-item bg-white rounded shadow fade-in" data-category="commercial">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Commercial Project 1">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Corporate Office Building</h3>
+                    <p class="text-gray-600">A sleek office space in Sfax, built to enhance productivity and aesthetics.</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded shadow fade-in project-item" data-category="residential">
-                <img src="photo3.jpg" alt="Multi-Story Building" class="w-full h-48 object-cover rounded mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">High-Rise Construction</h3>
-                <p class="text-gray-600">A multi-story residential building under construction, showcasing innovative structural design.</p>
+            <div class="project-item bg-white rounded shadow fade-in" data-category="industrial">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Industrial Project 1">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Manufacturing Plant</h3>
+                    <p class="text-gray-600">An efficient industrial facility in Bizerte, designed for operational excellence.</p>
+                </div>
+            </div>
+            <div class="project-item bg-white rounded shadow fade-in" data-category="residential">
+                <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Residential Project 2">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Luxury Apartment</h3>
+                    <p class="text-gray-600">A luxurious villa in Hammamet, blending modern design with natural surroundings.</p>
+                </div>
+            </div>
+            <div class="project-item bg-white rounded shadow fade-in" data-category="commercial">
+                <img src="https://images.unsplash.com/photo-1486325212027-7e7e965106df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Commercial Project 2">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Retail Center</h3>
+                    <p class="text-gray-600">A vibrant retail center in Sousse, designed for community engagement.</p>
+                </div>
+            </div>
+            <div class="project-item bg-white rounded shadow fade-in" data-category="industrial">
+                <img src="https://images.unsplash.com/photo-1581094288355-2a0e7f5d5b9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Industrial Project 2">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Warehouse Facility</h3>
+                    <p class="text-gray-600">A spacious warehouse in Gabès, optimized for storage and logistics.</p>
+                </div>
             </div>
         </section>
     </main>
@@ -94,14 +138,14 @@
         </div>
     </footer>
 
-   <!-- Back to Top Button -->
+    <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Back to Top">
         <i class="fas fa-chevron-up"></i>
     </button>
 
     <!-- JavaScript for Interactivity -->
     <script>
-       // Dark Mode Toggle
+        // Dark Mode Toggle
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const toggleDarkMode = () => {
             console.log("Dark mode toggle triggered");
@@ -116,13 +160,13 @@
             e.stopPropagation();
             toggleDarkMode();
         });
-        
+
         // Restore Dark Mode Preference
         if (localStorage.getItem('darkMode') === 'true') {
             document.body.classList.add('dark-mode');
             darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
-        
+
         // Hamburger Menu Toggle
         const menuToggle = document.getElementById('menu-toggle');
         const nav = document.querySelector('nav');
@@ -138,19 +182,19 @@
             e.stopPropagation();
             toggleMenu();
         });
-        
+
         // Sticky Header on Scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             header.classList.toggle('scrolled', window.scrollY > 0);
         });
-        
+
         // Back to Top Button
         const backToTop = document.getElementById('back-to-top');
         window.addEventListener('scroll', () => {
             backToTop.classList.toggle('visible', window.scrollY > 300);
         });
-        
+
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
@@ -158,7 +202,7 @@
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-        
+
         // Project Filtering
         document.querySelectorAll('.filter-btn').forEach(button => {
             button.addEventListener('click', () => {
@@ -168,7 +212,7 @@
                 });
                 button.classList.remove('bg-gray-300', 'text-gray-800');
                 button.classList.add('bg-blue-600', 'text-white');
-        
+
                 const filter = button.getAttribute('data-filter');
                 const items = document.querySelectorAll('.project-item');
                 items.forEach(item => {
@@ -187,7 +231,7 @@
                 });
                 button.classList.remove('bg-gray-300', 'text-gray-800');
                 button.classList.add('bg-blue-600', 'text-white');
-        
+
                 const filter = button.getAttribute('data-filter');
                 const items = document.querySelectorAll('.project-item');
                 items.forEach(item => {
