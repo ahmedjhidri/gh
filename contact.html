@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact GWorks Construction for top-quality construction services in Tunisia. Reach out for inquiries, quotes, or project discussions.">
-    <meta name="keywords" content="contact GWorks Construction, construction services Tunisia, Tunis construction company">
-    <title>Contact - GWorks Construction</title>
+    <meta name="description" content="Contact GWorks Construction in Tunisia for inquiries about our construction services.">
+    <meta name="keywords" content="contact GWorks Construction, construction company Tunisia, get in touch">
+    <title>GWorks Construction - Contact</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -35,37 +35,70 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero h-96 flex items-center justify-center text-white relative">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4">Contact <span class="orange-g">G</span>Works Construction</h1>
+            <p class="text-lg mb-6">We’re here to help with all your construction needs.</p>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12 flex-grow">
         <section class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
-            <p class="text-gray-600 max-w-2xl mx-auto">We’d love to hear from you! Reach out for inquiries, quotes, or project discussions.</p>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Get in Touch</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Have a question or need a quote? Reach out to us using the form below or contact us directly via phone or email.</p>
         </section>
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Get in Touch</h2>
-                <form action="https://formspree.io/f/xnqkqwev" method="POST" class="space-y-4">
-                    <div>
-                        <label for="name" class="block text-gray-700">Name</label>
-                        <input type="text" id="name" name="name" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-gray-700">Email</label>
-                        <input type="email" id="email" name="email" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-gray-700">Message</label>
-                        <textarea id="message" name="message" required rows="4" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
-                    </div>
-                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send Message</button>
-                </form>
+
+        <!-- Contact Information -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white p-6 rounded shadow fade-in">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Address</h3>
+                <p class="text-gray-600">123 Construction Avenue, Tunis, Tunisia</p>
             </div>
-            <div>
-                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Our Location</h2>
-                <p class="text-gray-600 mb-4">123 Avenue Habib Bourguiba, Tunis, Tunisia</p>
-                <p class="text-gray-600 mb-4">Phone: +216 71 123 456</p>
-                <p class="text-gray-600 mb-4">Email: contact@gworks.tn</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.614229632727!2d10.181531315201234!3d36.80649497994885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337f5e7e0f0b%3A0x7e6f1b0a4e5e4b9e!2sAvenue%20Habib%20Bourguiba%2C%20Tunis%2C%20Tunisia!5e0!3m2!1sen!2sus!4v1698281234567!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="bg-white p-6 rounded shadow fade-in">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
+                <p class="text-gray-600">+216 71 234 567</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow fade-in">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Email</h3>
+                <p class="text-gray-600">info@gworksconstruction.com</p>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="bg-white p-8 rounded shadow mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Send Us a Message</h2>
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 border rounded focus:border-blue-600" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 border rounded focus:border-blue-600" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" class="w-full p-3 border rounded focus:border-blue-600" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" class="w-full p-3 border rounded focus:border-blue-600" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Send Message</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Map -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Our Location</h2>
+            <div class="w-full h-96">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.2306327168086!2d10.178456315259574!3d36.80649497994892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337f5e7e0f0b%3A0x4e6b0e0f0f0e0f0f!2sTunis%2C%20Tunisia!5e0!3m2!1sen!2s!4v1696451234567!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
     </main>
@@ -112,11 +145,18 @@
     <script>
         // Dark Mode Toggle
         const darkModeToggle = document.getElementById('dark-mode-toggle');
-        darkModeToggle.addEventListener('click', () => {
+        const toggleDarkMode = () => {
+            console.log("Dark mode toggle triggered");
             document.body.classList.toggle('dark-mode');
             const isDarkMode = document.body.classList.contains('dark-mode');
             darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
             localStorage.setItem('darkMode', isDarkMode);
+        };
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+        darkModeToggle.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleDarkMode();
         });
 
         // Restore Dark Mode Preference
@@ -128,10 +168,17 @@
         // Hamburger Menu Toggle
         const menuToggle = document.getElementById('menu-toggle');
         const nav = document.querySelector('nav');
-        menuToggle.addEventListener('click', () => {
+        const toggleMenu = () => {
+            console.log("Hamburger menu toggle triggered");
             nav.classList.toggle('active');
             const isOpen = nav.classList.contains('active');
             menuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        };
+        menuToggle.addEventListener('click', toggleMenu);
+        menuToggle.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu();
         });
 
         // Sticky Header on Scroll
@@ -147,6 +194,10 @@
         });
 
         backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        backToTop.addEventListener('touchstart', (e) => {
+            e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
