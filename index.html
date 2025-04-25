@@ -159,20 +159,22 @@
         }
 
         // Hamburger Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const nav = document.querySelector('nav');
         const toggleMenu = () => {
             console.log("Hamburger menu toggle triggered");
-            nav.classList.toggle('active');
-            const isOpen = nav.classList.contains('active');
-            menuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        
+            const isHidden = nav.classList.contains('hidden');
+        
+            if (isHidden) {
+                nav.classList.remove('hidden');
+                nav.classList.add('flex');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                nav.classList.add('hidden');
+                nav.classList.remove('flex');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
         };
-        menuToggle.addEventListener('click', toggleMenu);
-        menuToggle.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            toggleMenu();
-        });
+
 
         // Sticky Header on Scroll
         window.addEventListener('scroll', () => {
