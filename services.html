@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore the construction services offered by GWorks Construction in Tunisia, including residential, commercial, and industrial projects.">
-    <meta name="keywords" content="construction services, Tunisia, residential construction, commercial construction">
-    <title>Services - GWorks Construction</title>
+    <meta name="keywords" content="construction services Tunisia, residential construction, commercial construction, industrial construction">
+    <title>GWorks Construction - Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -35,24 +35,42 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero h-96 flex items-center justify-center text-white relative">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4">Our Services at <span class="orange-g">G</span>Works Construction</h1>
+            <p class="text-lg mb-6">Comprehensive construction solutions tailored to your needs.</p>
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356847?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Construction Services" class="w-full h-auto mt-4 max-w-md mx-auto">
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12 flex-grow">
         <section class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">Our Services</h1>
-            <p class="text-gray-600 max-w-2xl mx-auto">Discover the range of construction services we offer, tailored to meet your needs across Tunisia.</p>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">What We Offer</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">At GWorks Construction, we provide a wide range of construction services to meet the diverse needs of our clients across Tunisia. From residential homes to large-scale industrial projects, we deliver quality and excellence in every project.</p>
         </section>
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded shadow">
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white p-6 rounded shadow fade-in">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Residential Construction</h3>
-                <p class="text-gray-600">Building modern, sustainable homes with a focus on quality and comfort.</p>
+                <p class="text-gray-600">Building dream homes with a focus on quality, design, and functionality. From single-family homes to apartment complexes, we bring your vision to life.</p>
             </div>
-            <div class="bg-white p-6 rounded shadow">
+            <div class="bg-white p-6 rounded shadow fade-in">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Commercial Construction</h3>
-                <p class="text-gray-600">Delivering state-of-the-art office buildings and commercial spaces.</p>
+                <p class="text-gray-600">Constructing commercial spaces that enhance business operations, including offices, retail centers, and hospitality venues, with an emphasis on durability and aesthetics.</p>
             </div>
-            <div class="bg-white p-6 rounded shadow">
+            <div class="bg-white p-6 rounded shadow fade-in">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Industrial Construction</h3>
-                <p class="text-gray-600">Constructing efficient and sustainable industrial facilities.</p>
+                <p class="text-gray-600">Delivering robust industrial facilities such as warehouses, factories, and plants, designed for efficiency and safety.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow fade-in">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Renovation & Remodeling</h3>
+                <p class="text-gray-600">Transforming existing spaces through renovations and remodeling, enhancing functionality and modernizing designs to meet contemporary standards.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow fade-in">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Project Management</h3>
+                <p class="text-gray-600">Providing end-to-end project management services to ensure timely completion, budget adherence, and quality control for all construction projects.</p>
             </div>
         </section>
     </main>
@@ -97,7 +115,7 @@
 
     <!-- JavaScript for Interactivity -->
     <script>
-       // Dark Mode Toggle
+        // Dark Mode Toggle
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const toggleDarkMode = () => {
             console.log("Dark mode toggle triggered");
@@ -112,13 +130,13 @@
             e.stopPropagation();
             toggleDarkMode();
         });
-        
+
         // Restore Dark Mode Preference
         if (localStorage.getItem('darkMode') === 'true') {
             document.body.classList.add('dark-mode');
             darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
-        
+
         // Hamburger Menu Toggle
         const menuToggle = document.getElementById('menu-toggle');
         const nav = document.querySelector('nav');
@@ -134,19 +152,19 @@
             e.stopPropagation();
             toggleMenu();
         });
-        
+
         // Sticky Header on Scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             header.classList.toggle('scrolled', window.scrollY > 0);
         });
-        
+
         // Back to Top Button
         const backToTop = document.getElementById('back-to-top');
         window.addEventListener('scroll', () => {
             backToTop.classList.toggle('visible', window.scrollY > 300);
         });
-        
+
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
