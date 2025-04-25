@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GWorks Constructions</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script>
+    function toggleMenu() {
+      document.querySelector('nav ul').classList.toggle('open');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">GWorks</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Building the Future</h1>
+    <p>Since 2016, GWorks Constructions has been delivering high-quality and sustainable projects across Tunisia.</p>
+    <a href="contact.html" class="cta-button">Get in Touch</a>
+  </section>
+  <section class="gallery">
+    <h2>Our Projects</h2>
+    <div class="gallery-grid">
+      <img src="construction.jpg" alt="Project 1" />
+      <img src="construction.jpg" alt="Project 2" />
+      <img src="construction.jpg" alt="Project 3" />
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 GWorks Constructions - All rights reserved.</p>
+  </footer>
+</body>
+</html>
