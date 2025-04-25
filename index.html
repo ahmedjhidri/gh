@@ -1,45 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GWorks Constructions</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script>
-    function toggleMenu() {
-      document.querySelector('nav ul').classList.toggle('open');
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works Construction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="logo">GWorks</div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="careers.html">Careers</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section class="hero">
-    <h1>Building the Future</h1>
-    <p>Since 2016, GWorks Constructions has been delivering high-quality and sustainable projects across Tunisia.</p>
-    <a href="contact.html" class="cta-button">Get in Touch</a>
-  </section>
-  <section class="gallery">
-    <h2>Our Projects</h2>
-    <div class="gallery-grid">
-      <img src="construction.jpg" alt="Project 1" />
-      <img src="construction.jpg" alt="Project 2" />
-      <img src="construction.jpg" alt="Project 3" />
-    </div>
-  </section>
-  <footer>
-    <p>© 2025 GWorks Constructions - All rights reserved.</p>
-  </footer>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-800">Works Construction</div>
+            <nav class="space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="projects.html" class="text-gray-700 hover:text-blue-600">Projects</a>
+                <a href="careers.html" class="text-gray-700 hover:text-blue-600">Careers</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero h-96 flex items-center justify-center text-white">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4">Building the Future</h1>
+            <p class="text-lg mb-6">Delivering quality construction services across Tunisia.</p>
+            <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to Works Construction</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">We are a leading construction company in Tunisia, dedicated to delivering innovative and sustainable building solutions for residential, commercial, and industrial projects.</p>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Our Expertise</h3>
+                <p class="text-gray-600">Specializing in high-quality construction and project management for diverse sectors.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Our Commitment</h3>
+                <p class="text-gray-600">Committed to safety, sustainability, and exceeding client expectations.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Our Vision</h3>
+                <p class="text-gray-600">Building a better future through innovative and reliable construction solutions.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Works Construction</h4>
+                    <p>Leading construction services in Tunisia.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+                        <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+                        <li><a href="careers.html" class="hover:text-blue-400">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/gworksconstructions" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gworks.tn" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p>© 2025 Works Construction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
