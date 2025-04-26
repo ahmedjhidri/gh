@@ -61,7 +61,7 @@ nav.active {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: white; /* Fixed typo: was 'sectoral' */
+    background-color: white;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -93,18 +93,21 @@ nav.active a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 .hero > * {
     position: relative;
-    z-index: 2; /* Ensure content inside .hero (like text) is above the overlay */
+    z-index: 2;
 }
 
 /* Slideshow for Hero Banner */
 .slide {
+    background-size: cover;
+    background-position: center;
     transition: opacity 1s ease-in-out;
+    z-index: 2;
 }
 
 /* Fade-in Animation */
