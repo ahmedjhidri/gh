@@ -11,18 +11,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen">
-    <!-- Dark Mode Toggle -->
-    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
-        <i class="fas fa-moon"></i>
-    </button>
-
     <!-- Header -->
     <header class="bg-white shadow sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-blue-800"><span class="orange-g">G</span>Works Construction</div>
-            <button id="menu-toggle" class="md:hidden" aria-label="Toggle Menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="header-buttons">
+                <button id="dark-mode-toggle" class="md:hidden" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="menu-toggle" class="md:hidden" aria-label="Toggle Menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
             <nav class="space-x-6 md:flex">
                 <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
                 <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
@@ -35,11 +39,11 @@
         </div>
     </header>
 
-    <!-- Hero Section with Slideshow -->
+    <!-- Hero Section -->
     <section class="hero h-96 flex items-center justify-center text-white relative">
-        <div class="slide absolute inset-0" style="background-image: url('construction.jpg');"></div>
+        <div class="slide absolute inset-0" style="background-image: url('photo3.jpg');"></div>
+        <div class="slide absolute inset-0" style="background-image: url('construction.jpg'); opacity: 0;"></div>
         <div class="slide absolute inset-0" style="background-image: url('photo2.jpg'); opacity: 0;"></div>
-        <div class="slide absolute inset-0" style="background-image: url('photo3.jpg'); opacity: 0;"></div>
         <div class="text-center relative z-10">
             <h1 class="text-4xl font-bold mb-4">Welcome to <span class="orange-g">G</span>Works Construction</h1>
             <p class="text-lg mb-6">Building the Future of Tunisia</p>
@@ -198,8 +202,6 @@
         const toggleMenu = () => {
             console.log("Hamburger menu toggle triggered");
             nav.classList.toggle('active');
-            const isOpen = nav.classList.contains('active');
-            menuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         };
         menuToggle.addEventListener('click', toggleMenu);
         menuToggle.addEventListener('touchstart', (e) => {
@@ -214,14 +216,12 @@
             link.addEventListener('click', () => {
                 console.log("Navigation link clicked, closing menu");
                 nav.classList.remove('active');
-                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
             });
             link.addEventListener('touchstart', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 console.log("Navigation link tapped, closing menu");
                 nav.classList.remove('active');
-                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
                 window.location.href = link.href;
             });
         });
@@ -261,7 +261,7 @@
 
         if (slides.length > 0) {
             slides[currentSlide].style.opacity = '1';
-            setInterval(showNextSlide, 5000); // Change slide every 5 seconds
+            setInterval(showNextSlide, 5000);
         } else {
             console.error('No slides found for the slideshow');
         }
