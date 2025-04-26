@@ -3,12 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact GWorks Construction in Tunisia for inquiries about our construction services.">
-    <meta name="keywords" content="contact GWorks Construction, construction company Tunisia, get in touch">
+    <meta name="description" content="Contact GWorks Construction in Tunisia for inquiries, quotes, or project discussions.">
+    <meta name="keywords" content="contact GWorks Construction, construction inquiries Tunisia">
     <title>GWorks Construction - Contact</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Overlay for the map */
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .map-container:hover .map-overlay {
+            opacity: 1;
+        }
+        .map-overlay a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .map-overlay a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen">
     <!-- Dark Mode Toggle -->
@@ -23,9 +61,9 @@
             <button id="menu-toggle" class="md:hidden" aria-label="Toggle Menu">
                 <i class="fas fa-bars"></i>
             </button>
-            <nav class="space-x-6 hidden md:flex">
+            <nav class="space-x-6 md:flex">
                 <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
-                <a href="about.html" class="text-gray-700 hover:text-blue-600">About Us</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
                 <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
                 <a href="projects.html" class="text-gray-700 hover:text-blue-600">Projects</a>
                 <a href="careers.html" class="text-gray-700 hover:text-blue-600">Careers</a>
@@ -39,7 +77,7 @@
     <section class="hero h-96 flex items-center justify-center text-white relative">
         <div class="text-center">
             <h1 class="text-4xl font-bold mb-4">Contact <span class="orange-g">G</span>Works Construction</h1>
-            <p class="text-lg mb-6">We’re here to help with all your construction needs.</p>
+            <p class="text-lg mb-6">We’re here to help with your construction needs.</p>
         </div>
     </section>
 
@@ -47,58 +85,56 @@
     <main class="container mx-auto px-4 py-12 flex-grow">
         <section class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-800 mb-4">Get in Touch</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Have a question or need a quote? Reach out to us using the form below or contact us directly via phone or email.</p>
-        </section>
-
-        <!-- Contact Information -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded shadow fade-in">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Address</h3>
-                <p class="text-gray-600">123 Construction Avenue, Tunis, Tunisia</p>
-            </div>
-            <div class="bg-white p-6 rounded shadow fade-in">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
-                <p class="text-gray-600">+216 71 234 567</p>
-            </div>
-            <div class="bg-white p-6 rounded shadow fade-in">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Email</h3>
-                <p class="text-gray-600">info@gworksconstruction.com</p>
-            </div>
+            <p class="text-gray-600 max-w-2xl mx-auto">Have a question or ready to start a project? Fill out the form below or reach out to us directly.</p>
         </section>
 
         <!-- Contact Form -->
-        <section class="bg-white p-8 rounded shadow mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Send Us a Message</h2>
-            <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section class="mb-12">
+            <div class="bg-white p-6 rounded shadow max-w-lg mx-auto">
+                <form id="contact-form" class="space-y-4">
                     <div>
-                        <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
-                        <input type="text" id="name" name="name" class="w-full p-3 border rounded focus:border-blue-600" required>
+                        <label for="name" class="block text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="w-full p-2 border rounded" required>
                     </div>
                     <div>
-                        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-                        <input type="email" id="email" name="email" class="w-full p-3 border rounded focus:border-blue-600" required>
+                        <label for="email" class="block text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-2 border rounded" required>
                     </div>
-                </div>
-                <div>
-                    <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject</label>
-                    <input type="text" id="subject" name="subject" class="w-full p-3 border rounded focus:border-blue-600" required>
-                </div>
-                <div>
-                    <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
-                    <textarea id="message" name="message" rows="5" class="w-full p-3 border rounded focus:border-blue-600" required></textarea>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Send Message</button>
-                </div>
-            </form>
+                    <div>
+                        <label for="message" class="block text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full p-2 border rounded" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send Message</button>
+                </form>
+            </div>
         </section>
 
-        <!-- Map -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Our Location</h2>
-            <div class="w-full h-96">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.2306327168086!2d10.178456315259574!3d36.80649497994892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337f5e7e0f0b%3A0x4e6b0e0f0f0e0f0f!2sTunis%2C%20Tunisia!5e0!3m2!1sen!2s!4v1696451234567!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <!-- Contact Info -->
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Contact Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-4 rounded">
+                    <p class="text-gray-600">
+                        <a href="tel:+21671123456" class="hover:underline hover:text-blue-600">+216 71 123 456</a>
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded">
+                    <p class="text-gray-600">
+                        <a href="mailto:info@gworks.tn" class="hover:underline hover:text-blue-600">info@gworks.tn</a>
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded">
+                    <p class="text-gray-600">123 Avenue Habib Bourguiba, Tunis, Tunisia</p>
+                </div>
+            </div>
+            <!-- Map with Clickable Overlay -->
+            <div class="mt-8">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.998735582093!2d10.181531315201!3d36.806494979947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337f5e7e0f53%3A0x7b0a16b9e9c8f5b2!2sAvenue%20Habib%20Bourguiba%2C%20Tunis%2C%20Tunisia!5e0!3m2!1sen!2sus!4v1698161234567!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="map-overlay">
+                        <a href="https://www.google.com/maps/place/123+Avenue+Habib+Bourguiba,+Tunis,+Tunisia" target="_blank" rel="noopener noreferrer">Click to Open in Google Maps</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -181,6 +217,24 @@
             toggleMenu();
         });
 
+        // Close Menu When a Navigation Link is Clicked
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                console.log("Navigation link clicked, closing menu");
+                nav.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+            link.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log("Navigation link tapped, closing menu");
+                nav.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                window.location.href = link.href;
+            });
+        });
+
         // Sticky Header on Scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
@@ -199,6 +253,15 @@
         backToTop.addEventListener('touchstart', (e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Contact Form Submission (Basic Example)
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log("Form submitted");
+            alert("Thank you for your message! We'll get back to you soon.");
+            contactForm.reset();
         });
     </script>
 </body>
