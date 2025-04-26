@@ -108,6 +108,9 @@ nav.active a {
     background-position: center;
     transition: opacity 1s ease-in-out;
     z-index: 2;
+    width: 100%; /* Ensure the slide fills the hero section */
+    height: 100%; /* Ensure the slide fills the hero section */
+    background-color: #333; /* Fallback color if images fail to load */
 }
 
 /* Fade-in Animation */
