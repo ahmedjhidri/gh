@@ -56,11 +56,17 @@ header.scrolled {
 
 /* Navigation Styles */
 nav {
-    display: none; /* Hidden by default on mobile */
+    display: none;
+}
+
+@media (max-width: 767px) {
+    nav {
+        display: none !important;
+    }
 }
 
 nav.active {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -80,7 +86,7 @@ nav.active a {
         display: none;
     }
     nav {
-        display: flex !important; /* Always visible on desktop */
+        display: flex !important;
     }
 }
 
@@ -142,7 +148,8 @@ nav.active a {
 .header-buttons {
     display: flex;
     align-items: center;
-    gap: 5mm;
+    gap: 5mm; /* Approximately 18-20px at 96 DPI */
+    gap: 20px; /* Fallback for devices that don't handle mm units correctly */
 }
 
 /* Hamburger Menu Icon */
