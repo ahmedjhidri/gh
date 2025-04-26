@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GWorks Construction offers top-quality construction services in Tunisia for residential, commercial, and industrial projects.">
-    <meta name="keywords" content="construction services Tunisia, GWorks Construction, Tunis construction company, residential construction">
+    <meta name="description" content="GWorks Construction - Leading construction services in Tunisia.">
+    <meta name="keywords" content="construction Tunisia, GWorks Construction">
     <title>GWorks Construction - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .slide {
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen">
     <!-- Dark Mode Toggle -->
@@ -23,9 +28,9 @@
             <button id="menu-toggle" class="md:hidden" aria-label="Toggle Menu">
                 <i class="fas fa-bars"></i>
             </button>
-            <nav class="space-x-6 hidden md:flex">
+            <nav class="space-x-6 md:flex">
                 <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
-                <a href="about.html" class="text-gray-700 hover:text-blue-600">About Us </a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
                 <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
                 <a href="projects.html" class="text-gray-700 hover:text-blue-600">Projects</a>
                 <a href="careers.html" class="text-gray-700 hover:text-blue-600">Careers</a>
@@ -35,67 +40,75 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Slideshow -->
     <section class="hero h-96 flex items-center justify-center text-white relative">
-        <div class="text-center">
-            <h1 class="text-lg font-semibold mb-4 text-white"><span class="orange-g">G</span>Works Construction</h1>
-            <h2 class="text-3xl font-bold mb-4">Building the Future</h2>
-            <p class="text-lg mb-6">Delivering quality construction services across Tunisia.</p>
-            <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Get in Touch</a>
+        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356847?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
+        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1622473591-6a81c6a6c58f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); opacity: 0;"></div>
+        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1598647709945-0b86d0d9a4b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); opacity: 0;"></div>
+        <div class="text-center relative z-10">
+            <h1 class="text-4xl font-bold mb-4">Welcome to <span class="orange-g">G</span>Works Construction</h1>
+            <p class="text-lg mb-6">Building the Future of Tunisia</p>
+            <a href="contact.html" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Get in Touch</a>
         </div>
     </section>
-
-    <!-- CTA Banner -->
-    <section class="bg-blue-600 text-white text-center py-8">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-4">Ready to Start Your Project?</h2>
-            <p class="text-lg mb-6">Contact us today for a free consultation and quote.</p>
-            <a href="contact.html" class="bg-white text-blue-600 px-6 py-3 rounded hover:bg-gray-200">Request a Quote</a>
-        </div>
-    </section>
-<!-- Banner Section -->
-
-
-
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12 flex-grow">
+        <!-- Services Overview -->
         <section class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to GWorks Construction</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">We are a leading construction company in Tunisia, dedicated to delivering innovative and sustainable building solutions for residential, commercial, and industrial projects.</p>
-        </section>
-
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded shadow fade-in">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Our Expertise</h3>
-                <p class="text-gray-600">Specializing in high-quality construction and project management for diverse sectors.</p>
-            </div>
-            <div class="bg-white p-6 rounded shadow fade-in">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Our Commitment</h3>
-                <p class="text-gray-600">Committed to safety, sustainability, and exceeding client expectations.</p>
-            </div>
-            <div class="bg-white p-6 rounded shadow fade-in">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Our Vision</h3>
-                <p class="text-gray-600">Building a better future through innovative and reliable construction solutions.</p>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded shadow fade-in">
-                    <p class="text-gray-600 italic mb-4">"GWorks transformed our vision into reality with their professionalism and expertise."</p>
-                    <p class="text-gray-800 font-semibold">Ahmed Ben Salah, Tunis</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Residential Construction</h3>
+                    <p class="text-gray-600">Building quality homes with precision and care.</p>
                 </div>
                 <div class="bg-white p-6 rounded shadow fade-in">
-                    <p class="text-gray-600 italic mb-4">"Their attention to detail and commitment to quality is unmatched."</p>
-                    <p class="text-gray-800 font-semibold">Fatima Zohra, Sfax</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Commercial Projects</h3>
+                    <p class="text-gray-600">Delivering robust solutions for businesses.</p>
                 </div>
                 <div class="bg-white p-6 rounded shadow fade-in">
-                    <p class="text-gray-600 italic mb-4">"We completed our project on time and within budget, thanks to GWorks."</p>
-                    <p class="text-gray-800 font-semibold">Mohamed Ali, Bizerte</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Renovations</h3>
+                    <p class="text-gray-600">Transforming spaces with modern designs.</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- About Overview -->
+        <section class="mb-12">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 p-6">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
+                    <p class="text-gray-600 mb-4">GWorks Construction is a leading construction company in Tunisia, dedicated to delivering high-quality projects with a focus on innovation and sustainability.</p>
+                    <a href="about.html" class="text-blue-600 hover:underline">Learn More</a>
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Construction site" class="rounded shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Overview -->
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded shadow fade-in">
+                    <img src="https://images.unsplash.com/photo-1571568113351-5d2d092e36e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Project 1" class="mb-4 rounded">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Residential Complex</h3>
+                    <p class="text-gray-600">A modern housing project in Tunis.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow fade-in">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Project 2" class="mb-4 rounded">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Commercial Building</h3>
+                    <p class="text-gray-600">A new office space in Sfax.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow fade-in">
+                    <img src="https://images.unsplash.com/photo-1560448205-4d9b3e6bb6db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Project 3" class="mb-4 rounded">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Renovation Project</h3>
+                    <p class="text-gray-600">Revamping a historic building in Sousse.</p>
+                </div>
+            </div>
+            <div class="mt-6">
+                <a href="projects.html" class="text-blue-600 hover:underline">View All Projects</a>
             </div>
         </section>
     </main>
@@ -105,7 +118,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h4 class="text-lg font-semibold mb-4"><span class="orange-g">G</span><span class="text-blue-600">Works Construction</span></h4>
+                    <h4 class="text-lg font-semibold mb-4"><span class="orange-g">G</span>Works Construction</h4>
                     <p>Leading construction services in Tunisia.</p>
                 </div>
                 <div>
@@ -178,6 +191,24 @@
             toggleMenu();
         });
 
+        // Close Menu When a Navigation Link is Clicked
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                console.log("Navigation link clicked, closing menu");
+                nav.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+            link.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log("Navigation link tapped, closing menu");
+                nav.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                window.location.href = link.href;
+            });
+        });
+
         // Sticky Header on Scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
@@ -197,28 +228,19 @@
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-        let photos = document.querySelectorAll('.banner-photo');
-        let currentIndex = 0;
-        let durations = [10000, 20000, 10000]; // Durations for each image (in ms)
-        
-        function showNextPhoto() {
-            // Hide the current image
-            photos[currentIndex].classList.remove('visible');
-            
-            // Move to the next image index
-            currentIndex = (currentIndex + 1) % photos.length;
-            
-            // Show the new image
-            photos[currentIndex].classList.add('visible');
-            
-            // Reset the timer for the next image
-            setTimeout(showNextPhoto, durations[currentIndex]);
-        }
-        
-        // Start the first image and begin cycling
-        photos[currentIndex].classList.add('visible');
-        setTimeout(showNextPhoto, durations[currentIndex]);
 
+        // Slideshow for Hero Banner
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showNextSlide() {
+            slides[currentSlide].style.opacity = '0'; // Hide current slide
+            currentSlide = (currentSlide + 1) % slides.length; // Move to next slide, loop back to 0 if at the end
+            slides[currentSlide].style.opacity = '1'; // Show next slide
+        }
+
+        slides[currentSlide].style.opacity = '1'; // Show the first slide initially
+        setInterval(showNextSlide, 10000); // Change slide every 10 seconds
     </script>
 </body>
 </html>
