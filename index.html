@@ -37,9 +37,9 @@
 
     <!-- Hero Section with Slideshow -->
     <section class="hero h-96 flex items-center justify-center text-white relative">
-        <div class="slide absolute inset-0" style="background-image: url('photo1.jpg');"></div>
-        <div class="slide absolute inset-0" style="background-image: url('photo2.jpg'); opacity: 0;"></div>
-        <div class="slide absolute inset-0" style="background-image: url('photo3.jpg'); opacity: 0;"></div>
+        <div class="slide absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356847');"></div>
+        <div class="slide absolute inset-0" style="background-image: url('main/photo2.jpg'); opacity: 0;"></div>
+        <div class="slide absolute inset-0" style="background-image: url('main/photo3.jpg'); opacity: 0;"></div>
         <div class="text-center relative z-10">
             <h1 class="text-4xl font-bold mb-4">Welcome to <span class="orange-g">G</span>Works Construction</h1>
             <p class="text-lg mb-6">Building the Future of Tunisia</p>
@@ -261,7 +261,7 @@
 
         if (slides.length > 0) {
             slides[currentSlide].style.opacity = '1';
-            setInterval(showNextSlide, 10000);
+            setInterval(showNextSlide, 5000); // Change slide every 5 seconds
         } else {
             console.error('No slides found for the slideshow');
         }
