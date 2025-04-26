@@ -11,21 +11,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen">
-    <!-- Dark Mode Toggle -->
-    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
-        <i class="fas fa-moon"></i>
-    </button>
-
     <!-- Header -->
     <header class="bg-white shadow sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-blue-800"><span class="orange-g">G</span>Works Construction</div>
-            <button id="menu-toggle" class="md:hidden" aria-label="Toggle Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="space-x-6 hidden md:flex">
+            <div class="header-buttons">
+                <button id="dark-mode-toggle" class="md:hidden" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="menu-toggle" class="md:hidden" aria-label="Toggle Menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+            <nav class="space-x-6">
                 <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
-                <a href="about.html" class="text-gray-700 hover:text-blue-600">About Us </a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
                 <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
                 <a href="projects.html" class="text-gray-700 hover:text-blue-600">Projects</a>
                 <a href="careers.html" class="text-gray-700 hover:text-blue-600">Careers</a>
