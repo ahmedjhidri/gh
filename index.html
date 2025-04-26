@@ -37,9 +37,9 @@
 
     <!-- Hero Section with Slideshow -->
     <section class="hero h-96 flex items-center justify-center text-white relative">
-        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356847?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
-        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1622473591-6a81c6a6c58f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); opacity: 0;"></div>
-        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1598647709945-0b86d0d9a4b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); opacity: 0;"></div>
+        <div class="slide absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356847');"></div>
+        <div class="slide absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1622473591-6a81c6a6c58f'); opacity: 0;"></div>
+        <div class="slide absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1598647709945-0b86d0d9a4b9'); opacity: 0;"></div>
         <div class="text-center relative z-10">
             <h1 class="text-4xl font-bold mb-4">Welcome to <span class="orange-g">G</span>Works Construction</h1>
             <p class="text-lg mb-6">Building the Future of Tunisia</p>
@@ -248,16 +248,23 @@
 
         // Slideshow for Hero Banner
         const slides = document.querySelectorAll('.slide');
+        console.log('Number of slides found:', slides.length);
         let currentSlide = 0;
 
         function showNextSlide() {
-            slides[currentSlide].style.opacity = '0'; // Hide current slide
-            currentSlide = (currentSlide + 1) % slides.length; // Move to next slide, loop back to 0 if at the end
-            slides[currentSlide].style.opacity = '1'; // Show next slide
+            console.log('Switching from slide', currentSlide);
+            slides[currentSlide].style.opacity = '0';
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.opacity = '1';
+            console.log('Switched to slide', currentSlide);
         }
 
-        slides[currentSlide].style.opacity = '1'; // Show the first slide initially
-        setInterval(showNextSlide, 10000); // Change slide every 10 seconds
+        if (slides.length > 0) {
+            slides[currentSlide].style.opacity = '1';
+            setInterval(showNextSlide, 10000);
+        } else {
+            console.error('No slides found for the slideshow');
+        }
     </script>
 </body>
 </html>
