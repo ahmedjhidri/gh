@@ -53,6 +53,14 @@
             <a href="contact.html" class="bg-white text-blue-600 px-6 py-3 rounded hover:bg-gray-200">Request a Quote</a>
         </div>
     </section>
+<!-- Banner Section -->
+<div class="banner">
+    <img src="photo1.jpg" alt="Banner Image 1" class="banner-photo">
+    <img src="photo2.jpg" alt="Banner Image 2" class="banner-photo">
+    <img src="photo3.jpg" alt="Banner Image 3" class="banner-photo">
+</div>
+
+
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12 flex-grow">
@@ -193,6 +201,28 @@
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+        let photos = document.querySelectorAll('.banner-photo');
+        let currentIndex = 0;
+        let durations = [10000, 20000, 10000]; // Durations for each image (in ms)
+        
+        function showNextPhoto() {
+            // Hide the current image
+            photos[currentIndex].classList.remove('visible');
+            
+            // Move to the next image index
+            currentIndex = (currentIndex + 1) % photos.length;
+            
+            // Show the new image
+            photos[currentIndex].classList.add('visible');
+            
+            // Reset the timer for the next image
+            setTimeout(showNextPhoto, durations[currentIndex]);
+        }
+        
+        // Start the first image and begin cycling
+        photos[currentIndex].classList.add('visible');
+        setTimeout(showNextPhoto, durations[currentIndex]);
+
     </script>
 </body>
 </html>
