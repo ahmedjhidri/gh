@@ -8,7 +8,15 @@
     --bg-dark: #2d3748;
     --white: #ffffff;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+    --transition: all 0.3s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -82,6 +90,7 @@ footer h4 {
     height: 70vh;
     min-height: 400px;
 }
+
 .hero {
     background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356847?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
@@ -134,7 +143,7 @@ footer h4 {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    animation: shimmer 2s infinite;
+    animation: shimmer 2s ease-in-out infinite;
 }
 
 @keyframes shimmer {
@@ -202,6 +211,7 @@ body.dark-mode header.scrolled {
     transform: rotate(360deg);
     background: linear-gradient(135deg, #005bb5, #002244);
     box-shadow: 0 0 12px rgba(0, 102, 204, 0.5);
+    border: 2px solid #fff; /* Enhance focus state for better visibility */
 }
 
 /* Custom Scrollbar */
@@ -285,15 +295,15 @@ body.dark-mode ::-webkit-scrollbar-thumb {
     }
 
     .hero h1 {
-        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        font-size: clamp(1.5rem, 4vw, 2rem); /* Make text slightly smaller */
     }
 
     .hero h2 {
-        font-size: clamp(1.25rem, 3vw, 2rem);
+        font-size: clamp(1.25rem, 3vw, 1.8rem); /* Adjust h2 text size */
     }
 
     .hero p {
-        font-size: clamp(0.875rem, 2vw, 1rem);
+        font-size: clamp(0.875rem, 2.5vw, 1rem);
     }
 
     .grid-cols-1.md\:grid-cols-2,
@@ -373,6 +383,7 @@ body.dark-mode #back-to-top {
 body.dark-mode #back-to-top:hover {
     background: #4299e1;
 }
+
 /* The container for the banner images */
 .banner {
     position: relative;
@@ -390,10 +401,10 @@ body.dark-mode #back-to-top:hover {
     height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    will-change: opacity; /* Optimize performance */
 }
 
 /* The class for the visible image */
 .visible {
     opacity: 1;
 }
-
