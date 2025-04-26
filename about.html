@@ -136,7 +136,7 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
+       <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Back to Top">
         <i class="fas fa-chevron-up"></i>
     </button>
@@ -144,7 +144,6 @@
     <!-- JavaScript for Interactivity -->
     <script>
         // Dark Mode Toggle
-       // Dark Mode Toggle
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const toggleDarkMode = () => {
             console.log("Dark mode toggle triggered");
@@ -172,14 +171,28 @@
         const toggleMenu = () => {
             console.log("Hamburger menu toggle triggered");
             nav.classList.toggle('active');
-            const isOpen = nav.classList.contains('active');
-            menuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         };
         menuToggle.addEventListener('click', toggleMenu);
         menuToggle.addEventListener('touchstart', (e) => {
             e.preventDefault();
             e.stopPropagation();
             toggleMenu();
+        });
+
+        // Close Menu When a Navigation Link is Clicked
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                console.log("Navigation link clicked, closing menu");
+                nav.classList.remove('active');
+            });
+            link.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log("Navigation link tapped, closing menu");
+                nav.classList.remove('active');
+                window.location.href = link.href;
+            });
         });
 
         // Sticky Header on Scroll
