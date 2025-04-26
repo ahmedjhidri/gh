@@ -129,13 +129,15 @@ nav.active a {
 #dark-mode-toggle {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 50%; /* Move to the center horizontally */
+    transform: translateX(200px); /* Shift it back toward the right */
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 1000;
 }
+
 
 @media (max-width: 767px) {
     #dark-mode-toggle {
