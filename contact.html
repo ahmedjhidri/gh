@@ -331,6 +331,132 @@
             alert("Thank you for your message! We'll get back to you soon.");
             contactForm.reset();
         });
+
+        // Enhanced Contact Form Validation
+        if (contactForm) {
+            // Real-time validation
+            const inputs = contactForm.querySelectorAll('input, textarea, select');
+            inputs.forEach(input => {
+                input.addEventListener('blur', validateField);
+                input.addEventListener('input', clearError);
+            });
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                if (validateForm()) {
+                    // Show loading state
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate form submission
+                    setTimeout(() => {
+                        // Show success message
+                        document.getElementById('success-message').classList.remove('hidden');
+                        contactForm.reset();
+                        
+                        // Reset button
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        
+                        // Hide success message after 5 seconds
+                        setTimeout(() => {
+                            document.getElementById('success-message').classList.add('hidden');
+                        }, 5000);
+                    }, 2000);
+                }
+            });
+        }
+
+        function validateField(e) {
+            const field = e.target;
+            const value = field.value.trim();
+            const fieldId = field.id;
+            
+            clearError(field);
+            
+            switch(fieldId) {
+                case 'name':
+                    if (value.length < 2) {
+                        showFieldError(field, 'Name must be at least 2 characters long');
+                    }
+                    break;
+                case 'email':
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        showFieldError(field, 'Please enter a valid email address');
+                    }
+                    break;
+                case 'phone':
+                    if (value && !/^[\+]?[0-9\s\-\(\)]{8,}$/.test(value)) {
+                        showFieldError(field, 'Please enter a valid phone number');
+                    }
+                    break;
+                case 'message':
+                    if (value.length < 10) {
+                        showFieldError(field, 'Message must be at least 10 characters long');
+                    }
+                    break;
+                case 'service':
+                    if (!value) {
+                        showFieldError(field, 'Please select a service type');
+                    }
+                    break;
+            }
+        }
+
+        function showFieldError(field, message) {
+            const errorDiv = field.parentNode.querySelector('.error-message');
+            if (errorDiv) {
+                errorDiv.textContent = message;
+                errorDiv.classList.remove('hidden');
+                field.classList.add('border-red-500');
+            }
+        }
+
+        function clearError(e) {
+            const field = e.target;
+            const errorDiv = field.parentNode.querySelector('.error-message');
+            if (errorDiv) {
+                errorDiv.classList.add('hidden');
+                field.classList.remove('border-red-500');
+            }
+        }
+
+        function validateForm() {
+            const requiredFields = contactForm.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    showFieldError(field, 'This field is required');
+                    isValid = false;
+                }
+            });
+            
+            return isValid;
+        }
+
+        // Character counter for message field
+        const messageField = document.getElementById('message');
+        if (messageField) {
+            const counter = document.createElement('div');
+            counter.className = 'text-sm text-gray-500 mt-1';
+            messageField.parentNode.appendChild(counter);
+            
+            messageField.addEventListener('input', () => {
+                const length = messageField.value.length;
+                counter.textContent = `${length}/1000 characters`;
+                
+                if (length > 900) {
+                    counter.classList.add('text-red-500');
+                } else {
+                    counter.classList.remove('text-red-500');
+                }
+            });
+        }
     </script>
 </body>
 </html>
