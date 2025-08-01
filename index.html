@@ -3,14 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GWorks Construction - Leading construction services in Tunisia.">
-    <meta name="keywords" content="construction Tunisia, GWorks Construction">
-    <title>GWorks Construction - Home</title>
+    <meta name="description" content="GWorks Construction - Leading construction services in Tunisia. Specializing in residential, commercial, and renovation projects with quality craftsmanship and innovative solutions.">
+    <meta name="keywords" content="construction Tunisia, GWorks Construction, residential construction, commercial projects, renovations, building services, construction company Tunisia">
+    <meta name="author" content="GWorks Construction">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="GWorks Construction - Building the Future of Tunisia">
+    <meta property="og:description" content="Leading construction services in Tunisia. Quality projects, innovative solutions, and reliable service.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gworks-construction.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>GWorks Construction - Building the Future of Tunisia</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="styles.css" as="style">
+    
+    <!-- Preload hero images -->
+    <link rel="preload" href="photo3.jpg" as="image">
+    <link rel="preload" href="construction.jpg" as="image">
+    <link rel="preload" href="photo2.jpg" as="image">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "GWorks Construction",
+        "url": "https://gworks-construction.com",
+        "logo": "https://gworks-construction.com/logo.png",
+        "description": "Leading construction services in Tunisia",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Tunisia"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service"
+        }
+    }
+    </script>
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading">
+        <div class="text-center">
+            <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">GWorks Construction</h2>
+            <p class="text-gray-600">Loading...</p>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="bg-white shadow sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -40,14 +87,48 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero h-96 flex items-center justify-center text-white relative">
+    <section class="hero h-screen flex items-center justify-center text-white relative">
         <div class="slide absolute inset-0" style="background-image: url('photo3.jpg');"></div>
         <div class="slide absolute inset-0" style="background-image: url('construction.jpg'); opacity: 0;"></div>
         <div class="slide absolute inset-0" style="background-image: url('photo2.jpg'); opacity: 0;"></div>
-        <div class="text-center relative z-10">
-            <h1 class="text-4xl font-bold mb-4">Welcome to <span class="orange-g">G</span>Works Construction</h1>
-            <p class="text-lg mb-6">Building the Future of Tunisia</p>
-            <a href="contact.html" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Get in Touch</a>
+        <div class="text-center relative z-10 max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">Welcome to <span class="orange-g">G</span>Works Construction</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-delay">Building the Future of Tunisia with Excellence & Innovation</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
+                <a href="contact.html" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 text-lg font-semibold">
+                    <i class="fas fa-phone mr-2"></i>Get Free Quote
+                </a>
+                <a href="projects.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-800 transition-all duration-300 transform hover:scale-105 text-lg font-semibold">
+                    <i class="fas fa-eye mr-2"></i>View Projects
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-blue-600 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="fade-in">
+                    <div class="text-4xl font-bold mb-2" data-count="150">0</div>
+                    <p class="text-blue-100">Projects Completed</p>
+                </div>
+                <div class="fade-in">
+                    <div class="text-4xl font-bold mb-2" data-count="12">0</div>
+                    <p class="text-blue-100">Years Experience</p>
+                </div>
+                <div class="fade-in">
+                    <div class="text-4xl font-bold mb-2" data-count="50">0</div>
+                    <p class="text-blue-100">Team Members</p>
+                </div>
+                <div class="fade-in">
+                    <div class="text-4xl font-bold mb-2" data-count="98">0</div>
+                    <p class="text-blue-100">% Client Satisfaction</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -174,6 +255,17 @@
 
     <!-- JavaScript for Interactivity -->
     <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
         // Dark Mode Toggle
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const toggleDarkMode = () => {
@@ -264,6 +356,112 @@
             setInterval(showNextSlide, 5000);
         } else {
             console.error('No slides found for the slideshow');
+        }
+
+        // Animate Counting Numbers
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('[data-count]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        };
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    
+                    // Animate counters when stats section is visible
+                    if (entry.target.closest('.bg-blue-600')) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+
+        // Enhanced Form Validation (for contact page)
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Basic validation
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                
+                let isValid = true;
+                
+                // Clear previous errors
+                document.querySelectorAll('.error-message').forEach(el => {
+                    el.classList.add('hidden');
+                });
+                
+                // Validate name
+                if (name.length < 2) {
+                    showError('name', 'Name must be at least 2 characters long');
+                    isValid = false;
+                }
+                
+                // Validate email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showError('email', 'Please enter a valid email address');
+                    isValid = false;
+                }
+                
+                // Validate message
+                if (message.length < 10) {
+                    showError('message', 'Message must be at least 10 characters long');
+                    isValid = false;
+                }
+                
+                if (isValid) {
+                    // Show success message
+                    document.getElementById('success-message').classList.remove('hidden');
+                    contactForm.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        document.getElementById('success-message').classList.add('hidden');
+                    }, 5000);
+                }
+            });
+        }
+        
+        function showError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const errorDiv = field.parentNode.querySelector('.error-message');
+            errorDiv.textContent = message;
+            errorDiv.classList.remove('hidden');
+            field.classList.add('border-red-500');
         }
     </script>
 </body>
