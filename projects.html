@@ -3,126 +3,755 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GWorks Construction - Projects</title>
+    <meta name="description" content="View the portfolio of projects by GWorks Construction in Tunisia. Residential, commercial, and industrial construction projects with quality and innovation.">
+    <meta name="keywords" content="construction projects Tunisia, GWorks Construction portfolio, residential projects, commercial projects, industrial projects">
+    <meta name="author" content="GWorks Construction">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Construction Projects Portfolio - GWorks Construction Tunisia">
+    <meta property="og:description" content="Explore our diverse portfolio of construction projects including residential, commercial, and industrial works in Tunisia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gworks-construction.com/projects">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Construction Projects Portfolio - GWorks Construction Tunisia</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="styles.css" as="style">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Construction Projects Portfolio",
+        "description": "Portfolio of construction projects by GWorks Construction",
+        "itemListElement": [
+            {
+                "@type": "CreativeWork",
+                "name": "Residential Projects"
+            },
+            {
+                "@type": "CreativeWork", 
+                "name": "Commercial Projects"
+            },
+            {
+                "@type": "CreativeWork",
+                "name": "Industrial Projects"
+            }
+        ]
+    }
+    </script>
 </head>
-<body>
-    <header>
-        <h1>GWorks Construction</h1>
-        <p>We Build the Future</p>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading">
+        <div class="text-center">
+            <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">GWorks Construction</h2>
+            <p class="text-gray-600">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-800"><span class="orange-g">G</span>Works Construction</div>
+            <div class="header-buttons">
+                <button id="dark-mode-toggle" class="md:hidden" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="menu-toggle" class="md:hidden" aria-label="Toggle Menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+            <nav class="space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600">About Us</a>
+                <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
+                <a href="projects.html" class="text-blue-600 font-medium" aria-current="page">Projects</a>
+                <a href="careers.html" class="text-gray-700 hover:text-blue-600">Careers</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="blog.html" class="text-gray-700 hover:text-blue-600">Blog</a>
+            </nav>
+        </div>
     </header>
 
-    <section id="projects">
-        <h2>Our Projects</h2>
-        <p>Discover our portfolio of successful construction projects across Tunisia.</p>
-        
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="hilton.jpg" alt="Hilton Hotel">
-                <h3>Hilton</h3>
-                <p>Travaux de réaménagement d'un hôtel : Travaux de Carthage. NOTRE MISSION : Travaux de réaménagement, second oeuvre, travaux place piétre et travaux de VRD.</p>
-            </div>
-            <div class="project-card">
-                <img src="novotel.jpg" alt="Novotel Hotel">
-                <h3>Hotel Novotel</h3>
-                <p>Construction d'un hôtel d'affaires de 292 lits aux berges du lac. NOTRE MISSION : Soutènement par micropieux jointifs, fondations profondes sur 138 pieux de diamètres 600, 800, et 1000mm, Deux sous-sols et R+6.</p>
-            </div>
-            <div class="project-card">
-                <img src="lake-tower.jpg" alt="Lake Tower">
-                <h3>Lake Tower</h3>
-                <p>Construction d'un ensemble immobilier à usage d'habitation, de bureaux et commerce R+6 situé aux Jardins de Carthage. NOTRE MISSION : Lot infrastructure, superstructure.</p>
-            </div>
-            <div class="project-card">
-                <img src="lake-bay.jpg" alt="Lake Bay">
-                <p>Construction d'un ensemble immobilier à usage d'habitation, de bureaux et de commerce R+8 aux Berges du lac II. NOTRE MISSION : Soutènement par paroi étanche en colonie, jet grouting, fondations profondes, deux sous-sols, Rdc et 8 étages.</p>
-            </div>
-            <div class="project-card">
-                <img src="gammart-clinic.jpg" alt="Gammart Inter. Clinic">
-                <h3>Gammart Inter. Clinic</h3>
-                <p>Construction d'une clinique et d'un centre de consultations externes. NOTRE MISSION : Soutènement, double paroi, R+1 sol et R+2.</p>
-            </div>
-            <div class="project-card">
-                <img src="centre-medical-bardo.jpg" alt="Centre Medical Bardo">
-                <h3>Centre Medical Bardo</h3>
-                <p>Construction d'un centre médical à Bardo. NOTRE MISSION : Exécution d'une paroi de soutènement par micropieux jointifs.</p>
-            </div>
-            <div class="project-card">
-                <img src="tunisia-mall-sfax.jpg" alt="Tunisia Mall Sfax">
-                <h3>Tunisia Mall Sfax</h3>
-                <p>Construction d'un centre commercial à Sfax. NOTRE MISSION : Travaux de fondation, exécution des tirants d'ancrage, mise en tension.</p>
-            </div>
-            <div class="project-card">
-                <img src="tunnel-saida-manoubia.jpg" alt="Tunnel Saida Manoubia">
-                <h3>Tunnel Saida Manoubia</h3>
-                <p>Construction d'un tunnel à Saida Manoubia. NOTRE MISSION : Soutènement du sol au NOTRE Saida Manoubia, projet RFR (paroi moulée - tirant d'ancrage).</p>
-            </div>
-            <div class="project-card">
-                <img src="residence-fahd.jpg" alt="Residence Fahd">
-                <h3>Residence Fahd</h3>
-                <p>Construction d'un immeuble de bureaux et de Commerce à la cité des Pins Lac II. NOTRE MISSION : Lot superstructure, 8 étages.</p>
-            </div>
-            <div class="project-card">
-                <img src="residence-ichbilia.jpg" alt="Residence Ichbilia">
-                <h3>Residence Ichbilia</h3>
-                <p>Construction d'un immeuble de bureaux et de Commerce aux Berges du lac II. NOTRE MISSION : Fondations profondes, soutènement et 2 sous-sols.</p>
-            </div>
-            <div class="project-card">
-                <img src="villa-de-maitre.jpg" alt="Villa de Maître">
-                <h3>Villa de Maître</h3>
-                <p>Ouvrage de soutènement et consolidation d'une villa de maître 964 mètres linéaires. NOTRE MISSION : Paroi lutécienne avec des tirants d'ancrage auto-forant type ISCHEBCK de profondeur 12m, d'un drain de sol avec des drains en PEHD enrobées de géotextile.</p>
-            </div>
-            <div class="project-card">
-                <img src="luxury-hall.jpg" alt="Luxury Hall">
-                <h3>Luxury Hall</h3>
-                <p>Construction d'un centre de loisir aux Berges du Lac II. NOTRE MISSION : Soutènement et les travaux de structure.</p>
-            </div>
-            <div class="project-card">
-                <img src="residence-luxury.jpg" alt="Residence Luxury">
-                <h3>Residence Luxury</h3>
-                <p>Construction d'un ensemble immobilier à usage d'habitation à Jinan Nasr II. NOTRE MISSION : Fondations profondes, gros oeuvre et second oeuvre.</p>
-            </div>
-            <div class="project-card">
-                <img src="crj.jpg" alt="CRJ">
-                <h3>CRJ</h3>
-                <p>Construction d'un ensemble immobilier à usage commercial au Centre Urbain Nord. NOTRE MISSION : Superstructure, gros oeuvre et second oeuvre.</p>
-            </div>
-            <div class="project-card">
-                <img src="megrine-palace.jpg" alt="Megrine Palace">
-                <h3>Megrine Palace</h3>
-                <p>Construction d'un immeuble R+4 à Megrine. NOTRE MISSION : Soutènement et R+4.</p>
-            </div>
-            <div class="project-card">
-                <img src="sotubi.jpg" alt="Sotubi">
-                <h3>Sotubi</h3>
-                <p>Construction de l'usine SAIDA. NOTRE MISSION : Construction de l'usine SAIDA.</p>
+    <!-- Hero Section -->
+    <section class="hero h-screen flex items-center justify-center text-white relative" style="background-image: url('photo1.jpg');">
+        <div class="text-center relative z-10 max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">Our Projects at <span class="orange-g">G</span>Works Construction</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-delay">Discover our portfolio of successful construction projects across Tunisia.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
+                <a href="#portfolio" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 text-lg font-semibold">
+                    <i class="fas fa-eye mr-2"></i>View Portfolio
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-800 transition-all duration-300 transform hover:scale-105 text-lg font-semibold">
+                    <i class="fas fa-phone mr-2"></i>Start Your Project
+                </a>
             </div>
         </div>
+    </section>
 
-        <section id="project-stats">
-            <h2>Project Statistics</h2>
-            <p>Our track record speaks for itself. Here are some key statistics from our completed projects.</p>
-            <div class="stats-grid">
-                <div class="stat-card">0 Projects Completed</div>
-                <div class="stat-card">0 Years Experience</div>
-                <div class="stat-card">0% Client Satisfaction</div>
-                <div class="stat-card">0 Cities Served</div>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 flex-grow">
+        <!-- Portfolio Overview -->
+        <section id="portfolio" class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">Project Portfolio</h2>
+            <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+            <p class="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+                Explore our diverse range of projects, showcasing our expertise in residential, commercial, and industrial construction. 
+                Each project reflects our commitment to quality, innovation, and client satisfaction.
+            </p>
+        </section>
+
+        <!-- Filter Buttons -->
+        <div class="flex justify-center space-x-4 mb-12">
+            <button class="filter-btn bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold" data-filter="all">
+                <i class="fas fa-th mr-2"></i>All Projects
+            </button>
+            <button class="filter-btn bg-gray-300 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-400 transition-all duration-300 transform hover:scale-105 font-semibold" data-filter="residential">
+                <i class="fas fa-home mr-2"></i>Residential
+            </button>
+            <button class="filter-btn bg-gray-300 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-400 transition-all duration-300 transform hover:scale-105 font-semibold" data-filter="commercial">
+                <i class="fas fa-building mr-2"></i>Commercial
+            </button>
+            <button class="filter-btn bg-gray-300 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-400 transition-all duration-300 transform hover:scale-105 font-semibold" data-filter="industrial">
+                <i class="fas fa-industry mr-2"></i>Industrial
+            </button>
+        </div>
+
+        <!-- Project Gallery -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="commercial">
+                <div class="relative overflow-hidden">
+                    <img src="hilton.jpg" alt="Hilton Hotel" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Commercial
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Hilton</h3>
+                    <p class="text-gray-600 mb-4">Travaux de réaménagement d'un hôtel : Travaux de Carthage. NOTRE MISSION : Travaux de réaménagement, second oeuvre, travaux place piétre et travaux de VRD.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2023</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="commercial">
+                <div class="relative overflow-hidden">
+                    <img src="novotel.jpg" alt="Novotel Hotel" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Commercial
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Hotel Novotel</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un hôtel d'affaires de 292 lits aux berges du lac. NOTRE MISSION : Soutènement par micropieux jointifs, fondations profondes sur 138 pieux de diamètres 600, 800, et 1000mm, Deux sous-sols et R+6.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2023</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="residential">
+                <div class="relative overflow-hidden">
+                    <img src="lake-tower.jpg" alt="Lake Tower" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Residential
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Lake Tower</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un ensemble immobilier à usage d'habitation, de bureaux et commerce R+6 situé aux Jardins de Carthage. NOTRE MISSION : Lot infrastructure, superstructure.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2024</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="residential">
+                <div class="relative overflow-hidden">
+                    <img src="lake-bay.jpg" alt="Lake Bay" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Residential
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Lake Bay</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un ensemble immobilier à usage d'habitation, de bureaux et de commerce R+8 aux Berges du lac II. NOTRE MISSION : Soutènement par paroi étanche en colonie, jet grouting, fondations profondes, deux sous-sols, Rdc et 8 étages.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2024</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="commercial">
+                <div class="relative overflow-hidden">
+                    <img src="gammart-clinic.jpg" alt="Gammart Inter. Clinic" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Commercial
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Gammart Inter. Clinic</h3>
+                    <p class="text-gray-600 mb-4">Construction d'une clinique et d'un centre de consultations externes. NOTRE MISSION : Soutènement, double paroi, R+1 sol et R+2.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2023</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="commercial">
+                <div class="relative overflow-hidden">
+                    <img src="centre-medical-bardo.jpg" alt="Centre Medical Bardo" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Commercial
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Centre Medical Bardo</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un centre médical à Bardo. NOTRE MISSION : Exécution d'une paroi de soutènement par micropieux jointifs.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2023</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="commercial">
+                <div class="relative overflow-hidden">
+                    <img src="tunisia-mall-sfax.jpg" alt="Tunisia Mall Sfax" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Commercial
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Tunisia Mall Sfax</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un centre commercial à Sfax. NOTRE MISSION : Travaux de fondation, exécution des tirants d'ancrage, mise en tension.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2023</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="industrial">
+                <div class="relative overflow-hidden">
+                    <img src="tunnel-saida-manoubia.jpg" alt="Tunnel Saida Manoubia" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Industrial
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Tunnel Saida Manoubia</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un tunnel à Saida Manoubia. NOTRE MISSION : Soutènement du sol au NOTRE Saida Manoubia, projet RFR (paroi moulée - tirant d'ancrage).</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2024</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="residential">
+                <div class="relative overflow-hidden">
+                    <img src="residence-fahd.jpg" alt="Residence Fahd" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Residential
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Residence Fahd</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un immeuble de bureaux et de Commerce à la cité des Pins Lac II. NOTRE MISSION : Lot superstructure, 8 étages.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2024</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="residential">
+                <div class="relative overflow-hidden">
+                    <img src="residence-ichbilia.jpg" alt="Residence Ichbilia" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Residential
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Residence Ichbilia</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un immeuble de bureaux et de Commerce aux Berges du lac II. NOTRE MISSION : Fondations profondes, soutènement et 2 sous-sols.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2024</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="residential">
+                <div class="relative overflow-hidden">
+                    <img src="villa-de-maitre.jpg" alt="Villa de Maître" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Residential
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Villa de Maître</h3>
+                    <p class="text-gray-600 mb-4">Ouvrage de soutènement et consolidation d'une villa de maître 964 mètres linéaires. NOTRE MISSION : Paroi lutécienne avec des tirants d'ancrage auto-forant type ISCHEBCK de profondeur 12m, d'un drain de sol avec des drains en PEHD enrobées de géotextile.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2023</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="commercial">
+                <div class="relative overflow-hidden">
+                    <img src="luxury-hall.jpg" alt="Luxury Hall" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Commercial
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Luxury Hall</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un centre de loisir aux Berges du Lac II. NOTRE MISSION : Soutènement et les travaux de structure.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2024</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="residential">
+                <div class="relative overflow-hidden">
+                    <img src="residence-luxury.jpg" alt="Residence Luxury" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Residential
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Residence Luxury</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un ensemble immobilier à usage d'habitation à Jinan Nasr II. NOTRE MISSION : Fondations profondes, gros oeuvre et second oeuvre.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2024</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="commercial">
+                <div class="relative overflow-hidden">
+                    <img src="crj.jpg" alt="CRJ" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Commercial
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">CRJ</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un ensemble immobilier à usage commercial au Centre Urbain Nord. NOTRE MISSION : Superstructure, gros oeuvre et second oeuvre.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2023</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="residential">
+                <div class="relative overflow-hidden">
+                    <img src="megrine-palace.jpg" alt="Megrine Palace" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Residential
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Megrine Palace</h3>
+                    <p class="text-gray-600 mb-4">Construction d'un immeuble R+4 à Megrine. NOTRE MISSION : Soutènement et R+4.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2023</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="industrial">
+                <div class="relative overflow-hidden">
+                    <img src="sotubi.jpg" alt="Sotubi" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Industrial
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Sotubi</h3>
+                    <p class="text-gray-600 mb-4">Construction de l'usine SAIDA. NOTRE MISSION : Construction de l'usine SAIDA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Completed 2024</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold">View Details →</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Ready to Start Your Project?</h2>
-            <p>Let's discuss your construction needs and how we can help bring your vision to life with our expertise and commitment to quality.</p>
+        <!-- Project Statistics -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 rounded-lg mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-6">Project Statistics</h2>
+                <div class="w-24 h-1 bg-white mx-auto mb-8"></div>
+                <p class="text-xl max-w-3xl mx-auto">
+                    Our track record speaks for itself. Here are some key statistics from our completed projects.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center fade-in">
+                    <div class="text-4xl font-bold mb-2" data-count="15">0</div>
+                    <div class="text-blue-200">Projects Completed</div>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="text-4xl font-bold mb-2" data-count="12">0</div>
+                    <div class="text-blue-200">Years Experience</div>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="text-4xl font-bold mb-2" data-count="98">0</div>
+                    <div class="text-blue-200">% Client Satisfaction</div>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="text-4xl font-bold mb-2" data-count="5">0</div>
+                    <div class="text-blue-200">Cities Served</div>
+                </div>
+            </div>
         </section>
 
-        <section id="newsletter">
-            <h2>Stay Updated</h2>
-            <p>Subscribe to our newsletter for project updates, construction insights, and industry news.</p>
-            <p>We respect your privacy. Unsubscribe at any time.</p>
+        <!-- Call to Action -->
+        <section class="text-center mb-12">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Ready to Start Your Project?</h2>
+                <p class="text-gray-600 mb-8 text-lg max-w-2xl mx-auto">
+                    Let's discuss your construction needs and how we can help bring your vision to life with our expertise and commitment to quality.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold text-lg">
+                        <i class="fas fa-phone mr-2"></i>Get Free Consultation
+                    </a>
+                    <a href="services.html" class="bg-transparent border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105 font-semibold text-lg">
+                        <i class="fas fa-tools mr-2"></i>Our Services
+                    </a>
+                </div>
+            </div>
         </section>
+    </main>
+
+    <!-- Newsletter Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Stay Updated</h2>
+                <p class="text-gray-600 mb-8 text-lg">Subscribe to our newsletter for project updates, construction insights, and industry news.</p>
+                <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email address" 
+                           class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                           required>
+                    <button type="submit" 
+                            class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold">
+                        <i class="fas fa-paper-plane mr-2"></i>Subscribe
+                    </button>
+                </form>
+                <div id="newsletter-success" class="hidden mt-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                    <i class="fas fa-check-circle mr-2"></i>Thank you for subscribing!
+                </div>
+                <p class="text-sm text-gray-500 mt-4">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 GWorks Construction. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4"><span class="orange-g">G</span>Works Construction</h4>
+                    <p>Leading construction services in Tunisia.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+                        <li><a href="services.html" class="hover:text-blue-400">Services</a></li>
+                        <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+                        <li><a href="careers.html" class="hover:text-blue-400">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-400">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/gworksconstructions" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gworks.tn" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p>© 2025 GWorks Construction. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Floating Contact Button -->
+    <div id="floating-contact" class="fixed bottom-20 left-4 z-50">
+        <button class="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-110" 
+                aria-label="Quick Contact" onclick="toggleContactMenu()">
+            <i class="fas fa-phone text-xl"></i>
+        </button>
+        <div id="contact-menu" class="hidden absolute bottom-16 left-0 bg-white rounded-lg shadow-xl p-4 min-w-64">
+            <h3 class="font-semibold text-gray-800 mb-3">Quick Contact</h3>
+            <div class="space-y-2 text-sm">
+                <div class="flex items-center">
+                    <i class="fas fa-phone text-green-600 mr-2"></i>
+                    <a href="tel:+21671123456" class="text-gray-700 hover:text-green-600">+216 71 123 456</a>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-envelope text-green-600 mr-2"></i>
+                    <a href="mailto:info@gworks.tn" class="text-gray-700 hover:text-green-600">info@gworks.tn</a>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
+                    <span class="text-gray-700">Tunis, Tunisia</span>
+                </div>
+            </div>
+            <div class="mt-3 pt-3 border-t border-gray-200">
+                <a href="contact.html" class="block text-center bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors duration-300 text-sm">
+                    Get Quote
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const toggleDarkMode = () => {
+            console.log("Dark mode toggle triggered");
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('darkMode', isDarkMode);
+        };
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+        darkModeToggle.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleDarkMode();
+        });
+
+        // Restore Dark Mode Preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Hamburger Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+        const toggleMenu = () => {
+            console.log("Hamburger menu toggle triggered");
+            nav.classList.toggle('active');
+        };
+        menuToggle.addEventListener('click', toggleMenu);
+        menuToggle.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+        // Close Menu When a Navigation Link is Clicked
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                console.log("Navigation link clicked, closing menu");
+                nav.classList.remove('active');
+            });
+            link.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log("Navigation link tapped, closing menu");
+                nav.classList.remove('active');
+                window.location.href = link.href;
+            });
+        });
+
+        // Sticky Header on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 300);
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        backToTop.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Floating Contact Button
+        function toggleContactMenu() {
+            const contactMenu = document.getElementById('contact-menu');
+            contactMenu.classList.toggle('hidden');
+        }
+
+        // Newsletter Subscription
+        const newsletterForm = document.getElementById('newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const email = document.getElementById('newsletter-email').value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+                
+                // Show success message
+                document.getElementById('newsletter-success').classList.remove('hidden');
+                newsletterForm.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('newsletter-success').classList.add('hidden');
+                }, 5000);
+                
+                // Here you would typically send the email to your backend
+                console.log('Newsletter subscription:', email);
+            });
+        }
+
+        // Project Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-blue-600', 'text-white');
+                    btn.classList.add('bg-gray-300', 'text-gray-800');
+                });
+                
+                // Add active class to clicked button
+                button.classList.remove('bg-gray-300', 'text-gray-800');
+                button.classList.add('bg-blue-600', 'text-white');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        item.classList.add('fade-in');
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Animate Counting Numbers
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('[data-count]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        };
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    
+                    // Animate counters when stats section is visible
+                    if (entry.target.closest('.bg-gradient-to-r')) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
